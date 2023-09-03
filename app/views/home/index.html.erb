@@ -1,6 +1,6 @@
 <div class="flex-container">
   <!-- Header -->
-  <header class="bg-blue-600 text-white p-4">
+  <header class="bg-custom-four text-white p-4">
     <div class="flex justify-center items-center">
       <img
         src="images/headshot.jpg"
@@ -21,7 +21,7 @@
     <section class="my-6">
       <h2 class="text-xl font-semibold mb-2">Introduction</h2>
       <p>
-        Hello! I'm Alex Beeken, a Senior Software Engineer with over 10 years of experience in the software industry. I specialize in backend technologies and am proficient in multiple programming languages including Ruby, Python, and JavaScript.
+        Hello! I'm Alex Beeken, a Senior Software Engineer with <%= ((Date.today - Date.new(2015, 6, 1)) / 365.25).to_i %> years of professional experience.
       </p>
     </section>
 
@@ -30,10 +30,11 @@
       <h2 class="text-xl font-semibold mb-2">Skills</h2>
       <ul class="list-disc list-inside">
         <li>Ruby on Rails</li>
-        <li>Python</li>
-        <li>JavaScript</li>
-        <li>Database Design</li>
-        <li>API Development</li>
+        <li>Postgres</li>
+        <li>MongoDB</li>
+        <li>Elasticsearch</li>
+        <li>React</li>
+        <li>Ember</li>
       </ul>
     </section>
 
@@ -41,27 +42,34 @@
     <section class="my-6">
       <h2 class="text-xl font-semibold mb-2">Experience</h2>
 
-      <div class="mb-4">
-        <h3 class="text-lg font-medium">XYZ Corp - Senior Software Engineer</h3>
-        <p class="text-sm text-gray-600">2018 - Present</p>
-        <p>
-          Worked on building scalable backend services, led a team of junior developers, and contributed to architecture decisions.
-        </p>
-      </div>
-
-      <div>
-        <h3 class="text-lg font-medium">ABC Inc - Software Engineer</h3>
-        <p class="text-sm text-gray-600">2014 - 2018</p>
-        <p>
-          Developed features for a high-traffic web application, wrote unit and integration tests, and participated in code reviews.
-        </p>
-      </div>
+      <% @experience.each do |job| %>
+        <div class="mb-4">
+          <div class="flex justify-left items-left mb-1">
+            <img
+              src=<%= job['logo'] %>
+              class="h-auto max-w-xxxs rounded-full mr-2"
+              alt="A picture of the <%= job['company'] %> logo."
+            />
+            <div class="flex items-center justify-center">
+              <h3 class="text-lg font-medium"><b>Dutchie</b> - <%= job['position'] %> - <%= job['period'] %></h3>
+            </div>
+          </div>
+          <ul class="list-disc list-inside">
+          <% job['responsibilities'].each do |item| %>
+            <li class="mb-1"><%= item %></p>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
     </section>
 
     <!-- Education -->
     <section class="my-6">
       <h2 class="text-xl font-semibold mb-2">Education</h2>
-      <p>Bachelor's in Computer Science from University of Someplace, 2010-2014</p>
+      <%= @education.each do |school| %>
+        <% location = school['location'].present? ? "- #{school['location']}" : "" %>
+        <p><%= "#{school['institution']}#{location} - #{school['courses']}#{} - #{}" %></p>
+      <% end %>
     </section>
 
     <!-- Contact -->

@@ -13,15 +13,14 @@ module.exports = {
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
+      colors: {
+        'custom-one': '#312F2F',
+        'custom-two': '#84DCCF',
+        'custom-three': '#A6D9F7',
+        'custom-four': '#BCCCE0',
+        'custom-five': '#BF98A0',
+      },
     },
-    colors: {
-      '1': '#312F2F',
-      '2': '#84DCCF',
-      '3': '#A6D9F7',
-      '4': '#BCCCE0',
-      '5': '#BF98A0',
-    },
-  },
   },
   plugins: [
     require('@tailwindcss/forms'),

@@ -1,0 +1,66 @@
+personal_info:
+  name: "Alex Beeken"
+  email: "aeb242@gmail.com"
+  phone: "(503)-302-9379"
+
+skills:
+  - "Ruby on Rails developer with proficiency in Ruby on Rails, React, Ember, Postgres, MongoDB, Elasticsearch, GraphQL and Docker"
+  - "Familiarity with AWS architecture, experience with basic devops practices"
+  - "Proactive, quick learner, ownership focused with an eye for intuitive and reusable design patterns"
+
+experience:
+  - company: "Dutchie"
+    location: "Portland, Oregon"
+    position: "Senior Software Engineer II"
+    period: "March 2021 - present"
+    logo: "images/dutchie-logo.png"
+    responsibilities:
+      - Planned, lead and executed on project to upgrade monolith from ruby 2.7.3 to ruby 3.2.2.
+      - Improved the delivery schedule features of Dutchie’s ecommerce platform. Helped design and Implement new features and improved technical debt as well as database/query efficiency.
+      - Built a location based search feature with a small team working independently. Built internal tools to support search workflows company wide.
+      - Applied industry best practices and advocated for sensible object oriented design across the entire department.
+  - company: "Mineral HR (formerly Mammoth HR)"
+    location: "Portland, Oregon"
+    position: "Senior Software Engineer"
+    period: "July 2018 - March 2021"
+    logo: "images/dutchie-logo.png"
+    responsibilities:
+      - "Lead a small team of engineers on planning, estimating and delivering stories to users."
+      - "Developed and maintained SaaS application in Ruby on Rails with Ember frontend."
+      - "Engaged with Scrum leader, stake-holders and management to deliver high value products reliably."
+      - "Worked with engineering team members to meet or exceed value delivered goals each quarter."
+      - "Identified as a high performer for multiple evaluation periods."
+      - "Sole resource on several projects while also maintaining enterprise app with thousands of unique visitors each day."
+  - company: "FocusVision"
+    location: "Portland, Oregon"
+    position: "Software Engineer"
+    period: "June 2015 - May 2017"
+    logo: "images/dutchie-logo.png"
+    responsibilities:
+      - "Worked with team to redesign, integrate and increase efficiency of live video encoding and processing APIs."
+      - "Built APIs using Ruby on Rails according to JSONAPI standard to support numerous front facing EmberJS apps."
+      - "Gained proficiency in using Git, S3, Redis, HTML, CSS, Javascript, ES6, Sass and others."
+      - "Pair programmed, code reviewed, fixed bugs and performed inter team QA when needed."
+      - "Gave team presentations and lead team building workshops."
+
+education:
+  - institution: "Portland Community College/PSU"
+    courses: "Mathematics Courses"
+  - institution: "Epicodus"
+    location: "Portland, Oregon"
+    program: "Ruby/Javascript Tract"
+    graduation: "Class of Winter 2015"
+  - institution: "Northern Arizona University"
+    location: "Flagstaff, Arizona"
+    degree: "Choral Music Education, B.M.E."
+    graduation: "Graduated December 2012"
+
+achievements_community_activities:
+  - "Volunteer for EmberConf 2016 and 2017, MLConf 2016 and Ruby on Ales 2015"
+  - "Completed Harvard’s CS50x online class in computer science"
+  - "Attendee of RailsConf 2022"
+
+personal_projects_volunteering:
+  - project: "Mono Lake Committee"
+    description: "Built a standalone, offline web app for the touch screen display hardware in the interpretive center/bookstore in 2017. The app worked with zero updates right up until the hardware broke down in 2022."
+

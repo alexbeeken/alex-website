@@ -17,3 +17,7 @@
 .max-w-xxs {
   max-width: 10rem; /* or whatever value you prefer */
 }
+
+.max-w-xxxs {
+  max-width: 3rem; /* or whatever value you prefer */
+}
