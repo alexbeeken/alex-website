@@ -23,7 +23,7 @@ experience:
     location: "Portland, Oregon"
     position: "Senior Software Engineer"
     period: "July 2018 - March 2021"
-    logo: "images/dutchie-logo.png"
+    logo: "images/mineral-logo.png"
     responsibilities:
       - "Lead a small team of engineers on planning, estimating and delivering stories to users."
       - "Developed and maintained SaaS application in Ruby on Rails with Ember frontend."
@@ -31,11 +31,11 @@ experience:
       - "Worked with engineering team members to meet or exceed value delivered goals each quarter."
       - "Identified as a high performer for multiple evaluation periods."
       - "Sole resource on several projects while also maintaining enterprise app with thousands of unique visitors each day."
-  - company: "FocusVision"
+  - company: "Forsta (formerly FocusVision)"
     location: "Portland, Oregon"
     position: "Software Engineer"
     period: "June 2015 - May 2017"
-    logo: "images/dutchie-logo.png"
+    logo: "images/forsta-logo.jpg"
     responsibilities:
       - "Worked with team to redesign, integrate and increase efficiency of live video encoding and processing APIs."
       - "Built APIs using Ruby on Rails according to JSONAPI standard to support numerous front facing EmberJS apps."
