@@ -13,6 +13,9 @@ module.exports = {
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
+      transitionProperty: {
+        'max-height': 'max-height'
+      },
       colors: {
         'custom-one': '#312F2F',
         'custom-two': '#84DCCF',

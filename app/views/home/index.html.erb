@@ -43,7 +43,7 @@
       <h2 class="text-xl font-semibold mb-2">Experience</h2>
 
       <% @experience.each do |job| %>
-        <div class="mb-4">
+        <div class="group ease-in-out hover:max-h-[50rem] duration-800 transition-[max-height] p-4 max-h-0 lg:mb-[3rem] md: mb-[1rem] sm:mb-[8rem] hover:mb-[4rem]">
           <div class="flex justify-left items-left mb-3">
             <img
               src=<%= job['logo'] %>
@@ -54,12 +54,14 @@
               <h3 class="text-lg font-medium"><b><%= job['company'] %></b> - <%= job['position'] %> - <%= job['period'] %></h3>
             </div>
           </div>
-          <div class="grid s:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            <% job['responsibilities'].each do |item| %>
-              <div class="border-2 rounded-lg border-custom-two opacity-40 hover:opacity-100 transition-opacity p-4 h-auto">
-                <%= item %>
-              </div>
-            <% end %>
+          <div class="group-hover:block hidden" >
+            <div class="grid gap-3 s:grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+              <% job['responsibilities'].each do |item| %>
+                <div class="border-2 rounded-lg border-custom-two opacity-40 hover:opacity-100 transition-opacity p-4 h-auto">
+                  <%= item %>
+                </div>
+              <% end %>
+            </div>
           </div>
         </div>
       <% end %>
