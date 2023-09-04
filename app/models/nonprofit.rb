@@ -1,0 +1,2 @@
+class Nonprofit < ApplicationRecord
+end
