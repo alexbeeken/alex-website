@@ -44,21 +44,23 @@
 
       <% @experience.each do |job| %>
         <div class="mb-4">
-          <div class="flex justify-left items-left mb-1">
+          <div class="flex justify-left items-left mb-3">
             <img
               src=<%= job['logo'] %>
-              class="h-auto max-w-xxxs rounded-full mr-2"
+              class="max-h-xxxs max-w-xxxs rounded-full mr-2"
               alt="A picture of the <%= job['company'] %> logo."
             />
             <div class="flex items-center justify-center">
               <h3 class="text-lg font-medium"><b><%= job['company'] %></b> - <%= job['position'] %> - <%= job['period'] %></h3>
             </div>
           </div>
-          <ul class="list-disc list-inside">
-          <% job['responsibilities'].each do |item| %>
-            <li class="mb-1"><%= item %></p>
-          <% end %>
-          </ul>
+          <div class="grid s:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <% job['responsibilities'].each do |item| %>
+              <div class="border-2 rounded-lg border-custom-two opacity-40 hover:opacity-100 transition-opacity p-4 h-auto">
+                <%= item %>
+              </div>
+            <% end %>
+          </div>
         </div>
       <% end %>
     </section>
