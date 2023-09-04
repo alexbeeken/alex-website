@@ -1,4 +1,4 @@
-<div class="flex-container">
+<div class="flex-container w-full">
   <!-- Header -->
   <header class="bg-custom-four text-white p-4">
     <div class="flex justify-center items-center">
@@ -43,7 +43,7 @@
       <h2 class="text-xl font-semibold mb-2">Experience</h2>
 
       <% @experience.each do |job| %>
-        <div class="group ease-in-out hover:max-h-[50rem] duration-800 transition-[max-height] p-4 max-h-0 lg:mb-[3rem] md: mb-[1rem] sm:mb-[8rem] hover:mb-[4rem]">
+        <div class="group ease-in-out hover:max-h-[50rem] min-h-[8rem] md:min-h-[4rem] lg:min-h-[4rem] duration-800 transition-[max-height] p-4 max-h-0">
           <div class="flex justify-left items-left mb-3">
             <img
               src=<%= job['logo'] %>
@@ -70,24 +70,19 @@
     <!-- Education -->
     <section class="my-6">
       <h2 class="text-xl font-semibold mb-2">Education</h2>
-      <%= @education.each do |school| %>
-        <% location = school['location'].present? ? "- #{school['location']}" : "" %>
-        <p><%= "#{school['institution']}#{location} - #{school['courses']}#{} - #{}" %></p>
+      <% @education.each do |school| %>
+        <div class="mb-4">
+          <p><b><%= school['institution'] %></b></p>
+          <p><%= school['description'] %></p>
+        </div>
       <% end %>
     </section>
 
     <!-- Contact -->
     <section class="my-6">
-      <h2 class="text-xl font-semibold mb-2">Contact</h2>
-      <p>Email: alex.beeken@example.com</p>
-      <p>LinkedIn: linkedin.com/in/alexbeeken</p>
+      <h2 class="text-xl font-semibold mb-2">Contact Info</h2>
+      <p>aeb242@gmail.com</p>
+      <a class="text-blue-500" href="http://www.linkedin.com/in/alexbeeken">LinkedIn</a>
     </section>
   </main>
-
-  <!-- Footer -->
-  <footer class="bg-blue-600 text-white p-4 mt-8">
-    <div class="container mx-auto text-center">
-      <p>Copyright © 2023 Alex Beeken</p>
-    </div>
-  </footer>
 </div>

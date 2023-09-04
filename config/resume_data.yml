@@ -45,15 +45,11 @@ experience:
 
 education:
   - institution: "Portland Community College/PSU"
-    courses: "Mathematics Courses"
+    description: "Math Courses Up To Calculus 1"
   - institution: "Epicodus"
-    location: "Portland, Oregon"
-    program: "Ruby/Javascript Tract"
-    graduation: "Class of Winter 2015"
+    description: "Ruby/Javascript Tract - Class of Winter 2015"
   - institution: "Northern Arizona University"
-    location: "Flagstaff, Arizona"
-    degree: "Choral Music Education, B.M.E."
-    graduation: "Graduated December 2012"
+    description: "Undergraduate in Choral Music Education, B.M.E."
 
 achievements_community_activities:
   - "Volunteer for EmberConf 2016 and 2017, MLConf 2016 and Ruby on Ales 2015"
