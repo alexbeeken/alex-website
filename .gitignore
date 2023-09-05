@@ -39,4 +39,5 @@
 /node_modules
 /tmp
 .DS_Store
+/public/.DS_Store
 *.swp
