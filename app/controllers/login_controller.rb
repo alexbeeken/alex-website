@@ -1,4 +1,4 @@
-class ApplicationController < ActionController::Base
+class LoginController < ApplicationController
   helper_method :current_user
 
   def current_user
