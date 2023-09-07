@@ -20,6 +20,12 @@ class RoomsController < LoginController
   end
 
   def create
-    @room = Room.create(name: params["room"]["name"])
+    @room = Room.new(name: params["room"]["name"])
+
+    if @room.save
+      redirect_to "/rooms/#{@room.id}"
+    else
+      # TODO: flash errors
+    end
   end
 end
