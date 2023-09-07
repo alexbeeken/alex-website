@@ -13,6 +13,23 @@
 
   <body>
     <main class="container mx-auto mt-28 px-5 flex">
+      <% if flash[:errors].present? %>
+        <div class="text-lg font-bold text-red-600">
+          <% if flash[:errors].count == 1 %>
+            Error: <%= flash[:errors][0] %>
+          <% end %>
+
+          <% if flash[:errors].count > 1 %>
+            Errors:
+            <% flash[:errors].each do |error| %>
+              <%= error %>
+              <br>
+            <% end %>
+          <% end %>
+        </div>
+      <% end %>
+
+
       <%= yield %>
     </main>
   </body>

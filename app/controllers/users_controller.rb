@@ -13,9 +13,29 @@ class UsersController < LoginController
     render "rooms/index"
   end
 
+  def create
+    @new_user = User.new(user_params)
+
+    if @new_user.save
+      redirect_to signin_path
+    else
+      flash[:errors] = @new_user.errors.full_messages
+      redirect_to "/users/new"
+    end
+  end
+
+  def new
+    @new_user = User.new
+  end
+
   private
+
   def get_name(user1, user2)
     users = [user1, user2].sort
     "private_#{users[0].id}_#{users[1].id}"
+  end
+
+  def user_params
+    params.require(:user).permit(:username)
   end
 end

@@ -1,0 +1,5 @@
+<%= form_for @new_user, as: :user do |f| %>
+  <%= f.label :username, 'Choose a username' %>
+  <%= f.text_field :username, autocomplete: 'off' %>
+  <%= f.submit 'Sign Up' %>
+<% end %>
