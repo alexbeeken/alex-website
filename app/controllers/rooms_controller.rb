@@ -20,12 +20,23 @@ class RoomsController < LoginController
   end
 
   def create
-    @room = Room.new(name: params["room"]["name"])
+    @current_user = current_user
+    @users = User.all_except(@current_user)
+    @rooms = Room.public_rooms
 
-    if @room.save
-      redirect_to "/rooms/#{@room.id}"
+    name = params["room"]["name"].strip
+    if name.length <= 1
+      flash[:errors] = ["Room name cannot be blank"]
+      redirect_to "/rooms/index"
     else
-      # TODO: flash errors
+      @room = Room.new(name: params["room"]["name"])
+
+      if @room.save
+        redirect_to "/rooms/#{@room.id}"
+      else
+        flash[:errors] = @room.errors.full_messages
+        redirect_to "/rooms/index"
+      end
     end
   end
 end
