@@ -9,10 +9,10 @@
     </div>
   </div>
 
-  <div class="container border border-solid">
+  <div class="container border border-solid w-50">
     <h4 class="text-lg font-bold" > Rooms </h4>
     <%= turbo_stream_from "rooms" %>
-    <div id="rooms">
+    <div id="rooms", class="grid grid-cols-4">
       <%= render @rooms %>
     </div>
   </div>
@@ -22,15 +22,14 @@
       <h4 class="text-center text-lg"> <%= @user&.username ? "Private Message with: #{@user&.username}" : "Room: #{@single_room.name}" %> </h4>
 
       <%= turbo_stream_from @single_room %>
-      <div id="messages" class="bg-white border border-solid border-black h-32">
+      <div id="messages" class="bg-white border border-solid border-black h-56 overflow-scroll">
         <%= render @messages %>
       </div>
       <%= render partial: 'layouts/new_message_form' %>
     <% end %>
+    <%= render partial: "layouts/new_room_form" %>
+    <%= link_to 'Sign Out', signout_path, data: { "turbo-method": :delete }, class: "bg-custom-one hover:bg-custom-two text-white font-bold py-2 px-4 border border-custom-one rounded cursor-pointer float-right" %>
   </div>
-
-  <%= render partial: "layouts/new_room_form" %>
 </div>
 
-<%= link_to 'Sign Out', signout_path, data: { "turbo-method": :delete } %>
 
