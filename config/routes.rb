@@ -13,4 +13,5 @@ Rails.application.routes.draw do
     resources :messages
   end
   resources :users
+  resources :budgets, only: [:index]
 end
