@@ -1,0 +1,33 @@
+<script>
+  const fetchAccessToken = (public_token, metadata) => {
+    console.log('fetchAccessToken called');
+    // Use this method and store the access token in a table with a session idenfitier stored as a cookie
+    // fetch('/budgets/plaid_success', {
+    //   method: 'POST',
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //   },
+    //   body: JSON.stringify({
+    //     public_token: public_token,
+    //   }),
+    // });
+    document.cookie = `plaid_public_token=${public_token}; institution_id=${metadata.institution_id}`
+    window.location.href = "/budgets/plaid_success"
+  };
+
+  const handler = Plaid.create({
+    token: "<%= @link_token %>",
+    onSuccess: fetchAccessToken,
+    onLoad: () => { console.log("onLoad") },
+    onExit: (err, metadata) => { console.log("onExit") },
+    onEvent: (eventName, metadata) => { console.log("onEvent") }
+  });
+
+  handler.open();
+</script>
+
+<div class="mb-40">
+  <h1 class="text-lg">Budget</h1>
+  <br>
+  <p><b>Balance:</b> <%= @balance %></p>
+</div>
